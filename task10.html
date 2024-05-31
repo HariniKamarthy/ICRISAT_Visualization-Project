@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Climatic Conditions & Crop Yield Visualization</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9; /* Light grey background */
+            color: #333; /* Dark grey text */
+            text-align: center; /* Center all text */
+            padding: 20px; /* Add padding to avoid touching the edges */
+        }
+        body::before {
+            content: ''; /* Necessary for the pseudo-element to display */
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('Crop BG Image 1.svg'); /* Set the URL for your background image */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            filter: blur(8px); /* Apply the blur effect */
+            z-index: -1; /* Ensures the background stays behind the content */
+        }
+        h1 {
+            color: #2a2a2a; /* Slightly darker text for the title */
+            margin-bottom: 20px; /* Space below the title */
+        }
+        a {
+            display: inline-block; /* Centering the link */
+            margin: 10px 0; /* Margin above and below the link */
+            padding: 10px 20px; /* Padding inside the link */
+            background-color: #007bff; /* Bootstrap primary button color */
+            color: #ffffff; /* White text */
+            text-decoration: none; /* No underline */
+            border-radius: 5px; /* Rounded corners */
+            transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effect */
+        }
+        a:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+            transform: translateY(-2px);
+        }
+        img {
+            max-width: 95%; /* Limit the size of the image to 95% of its container */
+            height: auto; /* Maintain aspect ratio */
+            margin-top: 20px; /* Space above the image */
+            border-radius: 8px; /* Rounded corners for the image */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow around the image */
+        }
+    </style>
+</head>
+<body>
+    <h1>Distribution of Climatic Conditions & Crop Yield in Different Regions</h1>
+    <a href="https://colab.research.google.com/drive/1RrKMxNaBzDnVFYbcuKGR18LIR-DSmShq?usp=sharing">Open Python Altair Visualization in Google Collab</a>
+    <img src="task10_visualization.svg" alt="Visualization of climatic conditions and crop yield"><br/>
+    <br></br>
+    <img src="Task10_2.svg" alt="Visualization of climatic conditions and crop yield"><br/>
+    <br></br>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICRISAT Dataset Information</title>
+    <link rel="stylesheet" href="description.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Food Prices Dataset Information</h1>
+        <p class="dataset-info">
+            This dataset consists of the periodical data of the different food prices in various cities across the country. Its a large collection of data including the prices in local currency and US dollars, making it to understand the food prices trends over time.
+        </p>
+        <h2>Dataset Structure</h2>
+        <p class="dataset-info"> Shape of Food Prices Data set before data cleaning : (151810, 14).
+            Shape of Food Prices Data set after data cleaning : (151284, 13).i.e., it contains 13 attributes and 151284 rows/items </p>
+        <h2>Attributes Details</h2>
+        <table>
+            <tr>
+                <th>Column Name</th>
+                <th>Attribute Type</th>
+            </tr>
+            <tr>
+                <td>date, year</td>
+                <td>Ordinal, Quantitative/Numerical attribute</td>
+            </tr>
+            <tr>
+                <td>state, city, category, commodity, unit, priceflag, currency</td>
+                <td>Nominal, Qualitative/Categorical attribute</td>
+            </tr>
+            <tr>
+                <td>latitude, longitude, price, usdprice</td>
+                <td>Quantitative/Continuous Numerical attribute</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

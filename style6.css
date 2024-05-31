@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+body::before {
+    content: ''; /* Necessary for the pseudo-element to display */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('Crop BG Image 1.svg'); /* Set the URL for your background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(8px); /* Apply the blur effect */
+    z-index: -1; /* Ensures the background stays behind the content */
+}
+
+.title {
+    font-size: 18px;
+    font-weight: bold;
+    fill: #333;
+}
+
+#my_dataviz {
+    position: relative;
+    width: 70%;
+    height: 500px;
+    margin: auto;
+}
+
+input#yearSlider {
+    width: 50%;
+    margin: 20px auto;
+    display: block;
+}
+
+#slider-container {
+    margin: 20px;
+    text-align: center;
+}
+
+#sliderValue {
+    margin-left: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000;
+}
+
+.axis text {
+    font-size: 12px;
+}
+
+.bubbles {
+    stroke-width: 1;
+    stroke: #fff;
+}
+
+.tooltip {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    color: #333;
+    position: absolute;
+    text-align: center;
+    width: auto;
+    height: auto;
+    padding: 2px;
+    font: 12px sans-serif;
+    background: lightskyblue;
+    pointer-events: none;
+}
+
+.legend {
+    font-size: 12px;
+}

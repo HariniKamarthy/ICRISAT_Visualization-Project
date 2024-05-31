@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rice Production & Rainfall Visualization</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center; /* Center the content */
+        }
+        body::before {
+            content: ''; /* Necessary for the pseudo-element to display */
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('Crop BG Image 1.svg'); /* Set the URL for your background image */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            filter: blur(8px); /* Apply the blur effect */
+            z-index: -1; /* Ensures the background stays behind the content */
+        }
+        h1 {
+            color: #5a5a5a;
+            padding-top: 20px;
+        }
+        a {
+            display: inline-block;
+            margin: 20px;
+            padding: 10px 20px;
+            color: #ffffff;
+            background-color: #007bff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        a:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+        img {
+            max-width: 90%; /* Make the SVG responsive */
+            height: auto; /* Maintain aspect ratio */
+            margin-bottom: 20px; /* Add some space below the SVG */
+        }
+    </style>
+</head>
+<body>
+    <h1>Annual Average Rice Production & Rainfall by State</h1>
+    <a href="https://colab.research.google.com/drive/1ueMEx2KU_Lq0iP8MhrEbHxudav1rrt73?usp=sharing">View on Google Colab</a>
+    <img src="task8_visualization.svg" alt="Annual average rice production and rainfall visualization"><br/>
+    <br></br>
+    <img src="Task8_2.svg" alt="Annual average rice production and rainfall visualization"><br/>
+    <br></br>
+</body>
+</html>

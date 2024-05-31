@@ -1,0 +1,72 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9; /* Light grey background */
+    color: #333; /* Dark grey text */
+    text-align: center; /* Center all text */
+    padding: 40px; /* Add padding to avoid touching the edges */
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h2 {
+    color: #090909; /* Deep blue color; adjust as needed */
+    font-size: 2.5em; /* Large font size for prominence */
+    margin: 0; /* Add some space below the header */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Slight shadow for depth */
+    max-width: 150%; /* Ensure it doesn’t stretch too wide on larger screens */
+    justify-content: center;
+    text-align: center;
+    padding: 1em 0;
+}
+button {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    padding: 10px 20px; /* Padding inside the button */
+    margin: 10px 0; /* Margin above and below the button */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners for the button */
+    cursor: pointer; /* Cursor pointer when hover over the button */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Shadow effect for depth */
+    font-size: 1em; /* Font size for the button */
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s ease; /* Transition for button interaction */
+}
+button:hover {
+    background-color: #367C39; /* Darker green on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Larger shadow on hover */
+    transform: translateY(-2px);
+}
+button:active {
+    background-color: #2E5933; /* Even darker green when clicked */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Smaller shadow when clicked */
+}
+
+.data {
+    position: relative; /* Needed for the absolute positioning of the pseudo-element */
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    overflow: hidden; /* Prevents any overflow from the pseudo-element */
+    background: none; /* Remove background from the main container */
+}
+  
+.data::before {
+    content: ''; /* Necessary for the pseudo-element to display */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('Crop BG Image 1.svg'); /* Set the URL for your background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(8px); /* Apply the blur effect */
+    z-index: -1; /* Ensures the background stays behind the content */
+}
+  

@@ -1,0 +1,81 @@
+/* home.css */
+
+.home {
+  position: fixed; /* Needed for the absolute positioning of the pseudo-element */
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  overflow: hidden; /* Prevents any overflow from the pseudo-element */
+  background: none; /* Remove background from the main container */
+}
+
+.home::before {
+  content: ''; /* Necessary for the pseudo-element to display */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('Crop BG Image 1.svg'); /* Set the URL for your background image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(8px); /* Apply the blur effect */
+  z-index: -1; /* Ensures the background stays behind the content */
+}
+
+  
+/* Style for the header */
+.heading {
+  color: #090909; /* Deep blue color; adjust as needed */
+  font-size: 2.5em; /* Large font size for prominence */
+  margin: 0; /* Add some space below the header */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Slight shadow for depth */
+  max-width: 150%; /* Ensure it doesn’t stretch too wide on larger screens */
+  justify-content: center;
+  text-align: center;
+  padding: 1em 0;
+}
+    
+/* Style for the buttons */
+.btn {
+  background-color: #42b983; /* A green color; adjust as needed */
+  color: white;
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 20px;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+  margin-bottom: 10px; /* Space between buttons */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+}
+    
+/* Style for buttons on hover */
+.btn:hover {
+  background-color: #1ca93d; /* Darker shade for hover state */
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+    
+/* Style for buttons when clicked */
+.btn:active {
+  transform: translateY(1px); /* Depress button on click */
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Adjust shadow to give click effect */
+}
+    
+/* Ensuring the content scales nicely on different devices */
+@media (max-width: 768px) {
+  .heading {
+    font-size: 2em; /* Slightly smaller font for smaller devices */
+    padding: 1em 0;
+  }
+  .btn {
+    padding: 8px 15px; /* Slightly smaller buttons for smaller devices */
+  }
+}
+    

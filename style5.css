@@ -1,0 +1,128 @@
+
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: black;
+    shape-rendering: crispEdges;
+}
+
+.axis-label {
+    font-size: 12px;
+  }
+
+.line {
+    fill: none;
+    stroke: steelblue;
+    stroke-width: 2px;
+}
+
+.zoom {
+    cursor: move;
+    fill: none;
+    pointer-events: all;
+}
+
+.tooltip {
+    position: absolute;
+    text-align: center;
+    width: auto;
+    height: auto;
+    padding: 2px;
+    font: 12px sans-serif;
+    background: lightskyblue;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+body::before {
+    content: ''; /* Necessary for the pseudo-element to display */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('Crop BG Image 1.svg'); /* Set the URL for your background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(8px); /* Apply the blur effect */
+    z-index: -1; /* Ensures the background stays behind the content */
+}
+
+#chart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #333;
+    shape-rendering: crispEdges;
+}
+
+.axis-label {
+    font-size: 12px;
+    fill: #555;
+}
+
+.axis-label:hover {
+    fill: #000;
+    cursor: pointer;
+}
+
+.temp-line {
+    stroke: #ff6347; /* Tomato red for temperature */
+}
+
+.rain-line {
+    stroke: #4682b4; /* Steelblue for rainfall */
+}
+
+.title {
+    font-size: 20px;
+    font-weight: bold;
+    fill: #333;
+}
+
+.dot {
+    stroke: #fff;
+    stroke-width: 2px;
+}
+
+.tooltip {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    color: #333;
+    position: absolute;
+    text-align: center;
+    width: auto;
+    height: auto;
+    padding: 2px;
+    font: 12px sans-serif;
+    background: lightskyblue;
+    pointer-events: none;
+}
+
+/* You can add transitions for smooth animations */
+.transition {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Add a hover effect for the dots to increase their size */
+.temp-dot:hover, .rain-dot:hover {
+    fill: #af1d83; /* Light salmon */
+}

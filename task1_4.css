@@ -1,0 +1,71 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f0f0f0; /* Adjust the background color if needed */
+}
+
+body::before {
+    content: '';
+    position: fixed; /* Use fixed to cover the entire screen even when scrolling */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('Crop BG Image 1.svg'); /* Path to your image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(8px); /* Adjust blur intensity as needed */
+    z-index: -1; /* Position behind the content */
+}
+
+/* Since the pseudo-element is fixed, we need to ensure the content has a background to stand out */
+.content {
+    position: relative; /* Positioned relative to stack on top of the pseudo-element */
+    background: rgba(255, 255, 255, 0.85); /* Semi-transparent white background */
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds a shadow for more depth */
+}
+
+h1 {
+    margin: 2vh 0; /* Top and bottom margin for the heading */
+    padding: 0 5%; /* Left and right padding */
+    text-align: center; /* Center the text */
+    font-size: calc(10px + 2vmin); /* Responsive font size */
+}
+
+a {
+    display: inline-block;
+    margin: 20px;
+    padding: 10px 20px;
+    color: #ffffff;
+    background-color: #15ae58;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+a:hover {
+    background-color: #00b324;
+    transform: translateY(-2px);
+}
+
+img {
+    max-width: 95vw; /* Maximum of 95% of the viewport width */
+    max-height: 75vh; /* Maximum of 75% of the viewport height */
+    margin: 20px 0; /* Space above and below the image */
+}
+
+/* Additional media query for very large displays to limit content width */
+@media (min-width: 1200px) {
+    body {
+        max-width: 1200px; /* Limit the maximum width */
+        margin: auto; /* Center the body within the entire viewport */
+    }
+}
